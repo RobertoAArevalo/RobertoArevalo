@@ -1,5 +1,14 @@
 .App {
-  text-align: center;
+  margin-top: 500px;
+}
+
+.App-body {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: darkblue;
+  text-align: left;
+  font-size: 1.2em;
+  color: white;
 }
 
 .App-logo {
@@ -14,14 +23,16 @@
 }
 
 .App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.5em;
+  z-index: 1000;
 }
 
 .App-link {
@@ -35,4 +46,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.github_site {
+  font-size: 1.2em;
+  color: #61dafb;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+/*style for navbar w/ tabs*/
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: dimgrey;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.tab-link{
+  color:white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2em;
+  transition: background-color 0.5s;
+}
+
+.tab-link:hover {
+  background-color: #282c34;
+  border-radius: 4px;
 }
