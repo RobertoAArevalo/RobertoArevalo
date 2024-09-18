@@ -1,10 +1,14 @@
+.App-header {
+  position: relative; /* or static */
+}
+
 .App {
-  margin-top: 500px;
+  padding-top: 5vh;
 }
 
 .App-body {
   margin-top: 20px;
-  padding: 20px;
+  padding-top: 50vh; /* Padding adjusts based on viewport height */
   background-color: darkblue;
   text-align: left;
   font-size: 1.2em;
@@ -78,4 +82,4 @@
   background-color: #282c34;
   border-radius: 4px;
 }
-/*.*/
+
