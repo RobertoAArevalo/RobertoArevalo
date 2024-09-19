@@ -43,6 +43,15 @@
   color: #61dafb;
 }
 
+.Classes {
+  padding-top: 315px; /* Adds 100px gap from the top */
+}
+
+.Classes-body {
+  padding-top: 450em;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -59,6 +68,13 @@
   margin-top: 10px;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+  }
+}
+
 
 /*style for navbar w/ tabs*/
 .nav-tabs {
