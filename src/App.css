@@ -7,8 +7,8 @@
 }
 
 .App-body {
-  margin-top: 20px;
-  padding-top: 50vh; /* Padding adjusts based on viewport height */
+  margin-top: 45px;
+  padding-top: 20vh; /* Padding adjusts based on viewport height */
   background-color: darkblue;
   text-align: left;
   font-size: 1.2em;
@@ -43,6 +43,10 @@
   color: #61dafb;
 }
 
+.contact {
+  padding-top: 315px;
+}
+
 .Classes {
   padding-top: 315px; /* Adds 100px gap from the top */
 }
@@ -61,6 +65,11 @@
   }
 }
 
+.CourseWork {
+  padding-top: 315px; /* Adds 100px gap from the top */
+}
+
+
 .github_site {
   font-size: 1.2em;
   color: #61dafb;
@@ -68,6 +77,12 @@
   margin-top: 10px;
   display: block;
 }
+
+.JavaApp {
+  padding-top: 315px; /* Adds 100px gap from the top */
+}
+
+
 
 @media (max-width: 768px) {
   .App-header {
@@ -98,4 +113,27 @@
   background-color: #282c34;
   border-radius: 4px;
 }
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav-tabs {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-tabs.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
