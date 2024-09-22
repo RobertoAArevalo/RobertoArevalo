@@ -7,13 +7,15 @@
 }
 
 .App-body {
-  margin-top: 45px;
+  margin-top: 120px;
   padding-top: 20vh; /* Padding adjusts based on viewport height */
   background-color: darkblue;
   text-align: left;
   font-size: 1.2em;
   color: white;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -78,6 +80,24 @@
   display: block;
 }
 
+h1 {
+  font-size: 8vmin; /* Adjust dynamically */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5vmin; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (max-height: 600px) {
+  h1 {
+    font-size: 4vmin; /* Further reduction for shorter screens */
+  }
+}
+
+
+
 img {
   max-width: 100%; /* Makes the image responsive */
   height: auto;    /* Adjusts height automatically to maintain aspect ratio */
@@ -116,35 +136,55 @@ img {
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 3vmin; /* Dynamically adjust nav font size */
   transition: background-color 0.5s;
 }
+
+@media (max-width: 768px) {
+  .tab-link {
+    font-size: 2.5vmin; /* Smaller text size on small screens */
+  }
+}
+
+@media (max-height: 600px) {
+  .tab-link {
+    font-size: 2vmin; /* Further reduce for short screens */
+  }
+}
+
 
 .tab-link:hover {
   background-color: #282c34;
   border-radius: 4px;
 }
 /* Hamburger styles */
+/* Default: Hamburger is hidden for large screens */
 .hamburger {
   display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 850px) {
+  .hamburger {
+    display: block; /* Show hamburger for small screens */
+  }
+
   .nav-tabs {
-    display: none;
-    flex-direction: column;
+    display: none; /* Hide the nav links until hamburger is clicked */
   }
 
   .nav-tabs.open {
-    display: flex;
+    display: flex; /* Show the nav links when hamburger is open */
+  }
+}
+
+/* For larger screens: show nav-tabs and hide hamburger */
+@media (min-width: 851px) {
+  .nav-tabs {
+    display: flex; /* Show nav tabs for large screens */
   }
 
   .hamburger {
-    display: block;
+    display: none; /* Hide hamburger on larger screens */
   }
 }

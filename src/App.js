@@ -59,7 +59,7 @@ const Home = () => (
                 I am eager to leverage my expertise and pursue new challenges in the technology industry.<br/>
                 I enjoy developing websites and applications in my spare time.<br/>
             </p>
-            <img src={myImage} alt="MyPic" style={{ width: '100%', height: 'auto' }} /> {/* Add image here */}
+            <img src={myImage} alt="MyPic" style={{ width: '100%', height: 'auto' }} />
         </section>
     </main>
 );
