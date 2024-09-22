@@ -78,13 +78,24 @@
   display: block;
 }
 
+img {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto;    /* Adjusts height automatically to maintain aspect ratio */
+}
+
+@media (max-width: 850px) {
+  img {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+}
+
 .JavaApp {
   padding-top: 315px; /* Adds 100px gap from the top */
 }
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .App-header {
     padding: 10px;
   }
@@ -123,7 +134,7 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .nav-tabs {
     display: none;
     flex-direction: column;
