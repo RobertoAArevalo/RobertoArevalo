@@ -1,61 +1,22 @@
-.App-header {
-  position: relative; /* or static */
-}
-
 .App {
   padding-top: 5vh;
+  background-color: black;
 }
 
 .App-body {
-  margin-top: 120px;
-  padding-top: 20vh; /* Padding adjusts based on viewport height */
-  background-color: darkblue;
+  padding-top: 1vh; /* Padding adjusts based on viewport height */
   text-align: left;
   font-size: 1.2em;
   color: white;
-}
-
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #282c34;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 2.5em;
-  z-index: 1000;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.contact {
-  padding-top: 315px;
-}
-
-.Classes {
-  padding-top: 315px; /* Adds 100px gap from the top */
-}
-
-.Classes-body {
-  padding-top: 450em;
-  color: white;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @keyframes App-logo-spin {
@@ -67,9 +28,123 @@
   }
 }
 
-.CourseWork {
-  padding-top: 315px; /* Adds 100px gap from the top */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
+
+.App-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.5em;
+  z-index: 1000;
+}
+
+.header-title {
+  color: white; /* First h1 will be white */
+}
+
+.about-title {
+  color: black; /* Second h1 will be black */
+  transition: color 10ms ease-in-out, text-shadow 3s ease-in-out;
+}
+
+@media (max-width: 850px) {
+  .App-header {
+    padding: 10px;
+  }
+}
+
+body, html {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: white; /* To ensure text is readable */
+}
+
+.ClassesApp {
+  padding-top: 1vh;
+}
+
+.ClassesApp h1 {
+  color: white; /* Initial color */
+  transition: color 3s ease-in-out, text-shadow 3s ease-in-out; /* Smooth transition */
+}
+
+.contact {
+  padding-top: 1vh;
+}
+
+.contact h1 {
+  color: white; /* Initial color */
+  transition: color 3s ease-in-out, text-shadow 3s ease-in-out; /* Smooth transition */
+}
+
+.CourseWork {
+  padding-top: 1vh;
+}
+
+.CourseWork h1 {
+  color: white; /* Initial text color */
+  transition: color 3s ease-in-out, text-shadow 3s ease-in-out; /* Smooth transition for color and shadow */
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-flex; /* inline-flex aligns better with other links */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #282c34; /* Dark background for consistency */
+  min-width: 20vw;
+  top: 100%;
+  left: 50%;
+  box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .dropdown-content {
+    top: 90%; /* Increase top spacing for smaller screens */
+  }
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style for the dropdown links */
+.dropdown-content .tab-link {
+  padding: 10px 20px; /* Ensuring the padding matches other links */
+  text-decoration: none;
+  color: #ffffff;
+  display: block; /* Stack the links vertically */
+}
+
+.dropdown-content .tab-link:hover {
+  background-color: #505050; /* Hover effect for dropdown links */
+}
+
+
+
+
+
 
 
 .github_site {
@@ -96,8 +171,6 @@ h1 {
   }
 }
 
-
-
 img {
   max-width: 100%; /* Makes the image responsive */
   height: auto;    /* Adjusts height automatically to maintain aspect ratio */
@@ -110,17 +183,13 @@ img {
 }
 
 .JavaApp {
-  padding-top: 315px; /* Adds 100px gap from the top */
+  padding-top: 1vh;
 }
 
-
-
-@media (max-width: 850px) {
-  .App-header {
-    padding: 10px;
-  }
+.JavaApp h1 {
+  color: white; /* Initial text color */
+  transition: color 3s ease-in-out, text-shadow 3s ease-in-out; /* Smooth transition for color and shadow */
 }
-
 
 /*style for navbar w/ tabs*/
 .nav-tabs {
@@ -129,6 +198,39 @@ img {
   background-color: dimgrey;
   padding: 10px 0;
   margin-top: 10px;
+}
+
+/* Hamburger styles */
+/* Default: Hamburger is hidden for large screens */
+.hamburger {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 850px) {
+  .hamburger {
+    display: block; /* Show hamburger for small screens */
+  }
+
+  .nav-tabs {
+    display: none; /* Hide the nav links until hamburger is clicked */
+  }
+
+  .nav-tabs.open {
+    display: flex; /* Show the nav links when hamburger is open */
+    flex-direction: column; /* Stack the links vertically */
+  }
+}
+
+/* For larger screens: show nav-tabs and hide hamburger */
+@media (min-width: 851px) {
+  .nav-tabs {
+    display: flex; /* Show nav tabs for large screens */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger on larger screens */
+  }
 }
 
 .tab-link{
@@ -152,39 +254,10 @@ img {
   }
 }
 
-
 .tab-link:hover {
   background-color: #282c34;
   border-radius: 4px;
 }
-/* Hamburger styles */
-/* Default: Hamburger is hidden for large screens */
-.hamburger {
-  display: none;
-}
 
-/* Media query for smaller screens */
-@media (max-width: 850px) {
-  .hamburger {
-    display: block; /* Show hamburger for small screens */
-  }
 
-  .nav-tabs {
-    display: none; /* Hide the nav links until hamburger is clicked */
-  }
 
-  .nav-tabs.open {
-    display: flex; /* Show the nav links when hamburger is open */
-  }
-}
-
-/* For larger screens: show nav-tabs and hide hamburger */
-@media (min-width: 851px) {
-  .nav-tabs {
-    display: flex; /* Show nav tabs for large screens */
-  }
-
-  .hamburger {
-    display: none; /* Hide hamburger on larger screens */
-  }
-}

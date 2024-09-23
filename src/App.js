@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react'; // Fix import issue
+import React, { useState, useEffect } from 'react'; // Fix import issue
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Remove duplicate import
 import ClassesApp from './ClassesApp';
 import JavaApp from './JavaApp';
@@ -23,13 +23,19 @@ function App() {
         <Router>
             <div className="App">
                 <header className="App-header">
-                    <h1>Roberto Arevalo</h1>
+                    <h1 className="header-title">Roberto Arevalo</h1>
                     <button className="hamburger" onClick={toggleMenu}>☰</button>
                     <nav className={`nav-tabs ${isOpen ? 'open' : ''}`}>
                         <Link to="/" className="tab-link" onClick={closeMenu}>Home</Link>
                         <Link to="/ClassesApp" className="tab-link" onClick={closeMenu}>Classes App</Link>
                         <Link to="/JavaApp" className="tab-link" onClick={closeMenu}>Java App</Link>
-                        <Link to="/CourseWork" className="tab-link" onClick={closeMenu}>Course Work</Link>
+                        <div className="dropdown">
+                            <Link to="/CourseWork" className="tab-link" onClick={closeMenu}>Course Work</Link>
+                            <div className="dropdown-content">
+                                <Link to="/CourseWork/CST300" className="tab-link" onClick={closeMenu}>CST 300</Link>
+                                <Link to="/CourseWork/CST338" className="tab-link" onClick={closeMenu}>CST 338</Link>
+                            </div>
+                        </div>
                         <Link to="/Contact" className="tab-link" onClick={closeMenu}>Contact</Link>
                     </nav>
                 </header>
@@ -48,20 +54,37 @@ function App() {
 }
 
 // Home component for the home page
-const Home = () => (
-    <main className="App-body">
-        <section>
-            <h2>About Me</h2>
-            <p>
-                California State University Monterey Bay <br/>
-                B.S. Computer Science<br/>
-                I am a graduate from California State University - Monterey Bay.<br/>
-                I am eager to leverage my expertise and pursue new challenges in the technology industry.<br/>
-                I enjoy developing websites and applications in my spare time.<br/>
-            </p>
-            <img src={myImage} alt="MyPic" style={{ width: '100%', height: 'auto' }} />
-        </section>
-    </main>
-);
+const Home = () => {
+    useEffect(() => {
+        const h1Element = document.querySelector(".App-body h1");
+        if (h1Element) {
+            // Trigger the glowing blue effect
+            setTimeout(() => {
+                h1Element.style.color = "gradient";
+                h1Element.style.textShadow = `
+                    0 0 20px #003300,
+                    0 0 40px #3399ff,
+                    0 0 60px #3399ff
+                `;
+            }, 100); // Delay to make transition visible
+        }
+    }, []);
+
+    return (
+        <main className="App-body">
+            <section>
+                <h1 className="about-title">About Me</h1>
+                <p>
+                    California State University Monterey Bay <br/>
+                    B.S. Computer Science <br/>
+                    I am a graduate from California State University - Monterey Bay. <br/>
+                    I am eager to leverage my expertise and pursue new challenges in the technology industry. <br/>
+                    I enjoy developing websites and applications in my spare time.
+                </p>
+                <img src={myImage} alt="MyPic" style={{width: '100%', height: 'auto'}}/>
+            </section>
+        </main>
+    );
+};
 
 export default App;
