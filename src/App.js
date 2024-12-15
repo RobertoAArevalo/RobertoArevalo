@@ -72,17 +72,33 @@ const Home = () => {
 
     return (
         <main className="App-body">
-            <section>
+            <section style ={{ padding: "20px" }}>
                 <h1 className="about-title">About Me</h1>
                 <p>
                     California State University Monterey Bay <br/>
-                    B.S. Computer Science <br/>
+                    B.S. Computer Science with an emphasis in Software Engineering <br/>
                     I am a graduate from California State University - Monterey Bay. <br/>
                     I am eager to leverage my expertise and pursue new challenges in the technology industry. <br/>
                     I enjoy developing websites and applications in my spare time.
                 </p>
-                <img src={myImage} alt="MyPic" style={{width: '100%', height: 'auto'}}/>
             </section>
+                    <div style = {{margin: "0", padding: "0"}}>
+                        <img src={myImage} alt="MyPic" style={{width: '100%', height: 'auto'}}/>
+                    </div>
+
+                <section style ={{ padding: "20px" }}>
+                    <p>
+                Education Continued: <br/>
+                • Associate of Science for Transfer in Computer Science; San Diego Miramar College <br/>
+                • Master of Education in Inspired Teaching and Learning
+                - with an Emphasis in English Language Learner Education; National University <br/>
+                • Bachelor of Science - Nursing; San Diego State University <br/>
+                • Associate of Science - Nursing; Imperial Valley College <br/>
+                • Emergency Medical Technician - Basic (EMT-B); San Diego Miramar College <br/>
+                • Bachelor of Science - Biochemistry/Chemistry; UC San Diego <br/>
+                    </p>
+                </section>
+
         </main>
     );
 };
