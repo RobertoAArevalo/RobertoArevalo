@@ -36,7 +36,7 @@ function ClassesApp() {
             </a>
 
             <p>
-                Below is an exaple of the code used to create the application.
+                Below is an example of the code used to create the application.
                 <img src={myImage2} alt="Classes App2" style={{ width: "100%", height: "auto", marginTop: "30px" }}/>
             </p>
 

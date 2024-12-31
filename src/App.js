@@ -6,6 +6,12 @@ import JavaApp from './JavaApp';
 import CourseWork from './CourseWork';
 import Contact from './Contact';
 import myImage from './RaPhotolargecopy.jpeg';
+import CST300 from './CST300';
+import CST338 from './CST338';
+import CST363 from './CST363';
+import CST334 from './CST334';
+import CST311 from './CST311';
+import CST336 from "./CST336.js";
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +29,7 @@ function App() {
         <Router>
             <div className="App">
                 <header className="App-header">
-                    <h1 className="header-title">Roberto Arevalo</h1>
+                    {/*<h1 className="header-title">Roberto Arevalo</h1>*/}
                     <button className="hamburger" onClick={toggleMenu}>☰</button>
                     <nav className={`nav-tabs ${isOpen ? 'open' : ''}`}>
                         <Link to="/" className="tab-link" onClick={closeMenu}>Home</Link>
@@ -34,6 +40,11 @@ function App() {
                             <div className="dropdown-content">
                                 <Link to="/CourseWork/CST300" className="tab-link" onClick={closeMenu}>CST 300</Link>
                                 <Link to="/CourseWork/CST338" className="tab-link" onClick={closeMenu}>CST 338</Link>
+                                <Link to="/CourseWork/CST363" className="tab-link" onClick={closeMenu}>CST 363</Link>
+                                <Link to="/CourseWork/CST334" className="tab-link" onClick={closeMenu}>CST 334</Link>
+                                <Link to="/CourseWork/CST311" className="tab-link" onClick={closeMenu}>CST 311</Link>
+                                <Link to="/CourseWork/CST336" className="tab-link" onClick={closeMenu}>CST 336</Link>
+
                             </div>
                         </div>
                         <Link to="/Contact" className="tab-link" onClick={closeMenu}>Contact</Link>
@@ -46,6 +57,12 @@ function App() {
                     <Route path="/ClassesApp" element={<ClassesApp/>}/>
                     <Route path="/JavaApp" element={<JavaApp/>}/>
                     <Route path="/CourseWork" element={<CourseWork/>}/>
+                    <Route path="/CourseWork/CST300" element={<CST300/>}/>
+                    <Route path="/CourseWork/CST338" element={<CST338/>}/>
+                    <Route path="/CourseWork/CST363" element={<CST363/>}/>
+                    <Route path="/CourseWork/CST334" element={<CST334/>}/>
+                    <Route path="/CourseWork/CST311" element={<CST311/>}/>
+                    <Route path="/CourseWork/CST336" element={<CST336/>}/>
                     <Route path="/Contact" element={<Contact/>}/>
                 </Routes>
             </div>

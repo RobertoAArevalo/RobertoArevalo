@@ -1,3 +1,6 @@
+
+
+
 .App {
   padding-top: 5vh;
   background-color: black;
@@ -46,6 +49,8 @@
   font-size: 2.5em;
   z-index: 1000;
 }
+
+
 
 .header-title {
   color: white; /* First h1 will be white */
