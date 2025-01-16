@@ -11,7 +11,16 @@ import CST338 from './CST338';
 import CST363 from './CST363';
 import CST334 from './CST334';
 import CST311 from './CST311';
-import CST336 from "./CST336.js";
+import CST336 from './CST336';
+import CST462S from './CST462S';
+import CST370 from './CST370';
+import CST383 from './CST383';
+import CST438 from './CST438';
+import CST489 from './CST489';
+import CST499 from './CST499';
+
+
+
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +53,13 @@ function App() {
                                 <Link to="/CourseWork/CST334" className="tab-link" onClick={closeMenu}>CST 334</Link>
                                 <Link to="/CourseWork/CST311" className="tab-link" onClick={closeMenu}>CST 311</Link>
                                 <Link to="/CourseWork/CST336" className="tab-link" onClick={closeMenu}>CST 336</Link>
+                                <Link to="/CourseWork/CST462S" className="tab-link" onClick={closeMenu}>CST 462S</Link>
+                                <Link to="/CourseWork/CST370" className="tab-link" onClick={closeMenu}>CST 370</Link>
+                                <Link to="/CourseWork/CST383" className="tab-link" onClick={closeMenu}>CST 383</Link>
+                                <Link to="/CourseWork/CST438" className="tab-link" onClick={closeMenu}>CST 438</Link>
+                                <Link to="/CourseWork/CST489" className="tab-link" onClick={closeMenu}>CST 489</Link>
+                                <Link to="/CourseWork/CST499" className="tab-link" onClick={closeMenu}>CST 499</Link>
+
 
                             </div>
                         </div>
@@ -63,6 +79,14 @@ function App() {
                     <Route path="/CourseWork/CST334" element={<CST334/>}/>
                     <Route path="/CourseWork/CST311" element={<CST311/>}/>
                     <Route path="/CourseWork/CST336" element={<CST336/>}/>
+                    <Route path="/CourseWork/CST462S" element={<CST462S/>}/>
+                    <Route path="/CourseWork/CST370" element={<CST370/>}/>
+                    <Route path="/CourseWork/CST383" element={<CST383/>}/>
+                    <Route path="/CourseWork/CST438" element={<CST438/>}/>
+                    <Route path="/CourseWork/CST489" element={<CST489/>}/>
+                    <Route path="/CourseWork/CST499" element={<CST499/>}/>
+
+
                     <Route path="/Contact" element={<Contact/>}/>
                 </Routes>
             </div>
