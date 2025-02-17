@@ -15,12 +15,14 @@ jobs:
       - name: Move files from src to root
         run: |
           mv src/* .
-          rm -rf src  # Remove src folder after moving files
+          rm -rf src
 
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add .
-          git commit -m "Auto-deploy GitHub Pages"
-          git push origin main
+          git commit -m "Auto-deploy GitHub Pages" || echo "No changes to commit"
+          git push https://$GITHUB_TOKEN@github.com/RobertoAArevalo/personal_website.git main
