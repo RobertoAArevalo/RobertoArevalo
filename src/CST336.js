@@ -3,7 +3,7 @@ import './App.css';
 
 function CST336() {
     useEffect(() => {
-        const h1Element = document.querySelector(".CST311 h1");
+        const h1Element = document.querySelector(".CST336 h1");
         if (h1Element) {
             // Trigger the glowing blue effect with a delay
             setTimeout(() => {
