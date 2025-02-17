@@ -2,22 +2,22 @@ import './App.css';
 import React, { useState, useEffect } from 'react'; // Fix import issue
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Remove duplicate import
 import ClassesApp from './ClassesApp';
-import JavaApp from './JavaApp';
-import CourseWork from './CourseWork';
+import JavaApp from '../src/JavaApp';
+import CourseWork from '../src/CourseWork';
 import Contact from './Contact';
-import myImage from './RaPhotolargecopy.jpeg';
-import CST300 from './CST300';
-import CST338 from './CST338';
-import CST363 from './CST363';
-import CST334 from './CST334';
-import CST311 from './CST311';
-import CST336 from './CST336';
-import CST462S from './CST462S';
-import CST370 from './CST370';
-import CST383 from './CST383';
-import CST438 from './CST438';
-import CST489 from './CST489';
-import CST499 from './CST499';
+import myImage from '../src/RaPhotolargecopy.jpeg';
+import CST300 from '../src/CST300';
+import CST338 from '../src/CST338';
+import CST363 from '../src/CST363';
+import CST334 from '../src/CST334';
+import CST311 from '../src/CST311';
+import CST336 from '../src/CST336';
+import CST462S from '../src/CST462S';
+import CST370 from '../src/CST370';
+import CST383 from '../src/CST383';
+import CST438 from '../src/CST438';
+import CST489 from '../src/CST489';
+import CST499 from '../src/CST499';
 
 
 

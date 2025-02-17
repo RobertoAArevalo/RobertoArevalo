@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import myImage from './CsumbClasses.png';
-import myImage2 from './CsumbClasses2.png';
+import myImage from '../src/CsumbClasses.png';
+import myImage2 from '../src/CsumbClasses2.png';
 
 function ClassesApp() {
     useEffect(() => {

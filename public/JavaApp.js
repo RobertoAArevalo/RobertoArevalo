@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css';
+import '../public/App.css';
 import myImage from './JavaApp.png';
 import myImage2 from './JavaApp2.png';
 

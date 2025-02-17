@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import '../public/App.css';
 
 
 function CST383() {
