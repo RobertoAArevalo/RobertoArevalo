@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../public/App.css';
+import './App.css';
 
 function CST311() {
     useEffect(() => {

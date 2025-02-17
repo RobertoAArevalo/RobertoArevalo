@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import '../public/App.css';
+import './App.css';
 
-function CST336() {
+
+function CST438() {
     useEffect(() => {
-        const h1Element = document.querySelector(".CST336 h1");
+        const h1Element = document.querySelector(".CST438 h1");
         if (h1Element) {
             // Trigger the glowing blue effect with a delay
             setTimeout(() => {
@@ -18,8 +19,8 @@ function CST336() {
     }, []);
 
     return (
-        <div className="CST336">
-            <h1>CST 336 Internet Programming (JavaScript)</h1>
+        <div className="CST438">
+            <h1>CST 438 Software Engineering</h1>
             <p>Course Objective:
                 The course covers internet architecture, responsive design, RESTful web services, and web APIs.
                 Internet architecture is the design and understanding of how the internet works. RESTful web services
@@ -29,10 +30,9 @@ function CST336() {
                 of http services. All of these things would be the legs of the table that hold up internet applications.
                 This understanding of internet programming is important to developers because the internet is becoming
                 exceedingly prevalent. The need for applications to run through the internet is constantly growing.
+                The following is a pdf of a website that was developed my team and myself during this class. I focused
+                on connecting the API's as well as designing some of the pages.<br/>
 
-                The following is a pdf of a website that was developed my team and myself during this class.
-                I focused on connecting the API's as well as designing some of the pages.
-                <br/>
             </p>
 
 
@@ -40,4 +40,4 @@ function CST336() {
     );
 }
 
-export default CST336;
+export default CST438;
